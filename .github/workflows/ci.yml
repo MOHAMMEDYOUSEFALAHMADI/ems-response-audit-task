@@ -1,0 +1,21 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: pip install pytest ruff
+      - run: ruff check . && ruff format --check .
+      - name: Visible task tests
+        working-directory: task/repo
+        run: python -m pytest -q
+      - name: Report runs
+        working-directory: task/repo
+        run: python -m dispatch.report data --out /tmp/report.json
