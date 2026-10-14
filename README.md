@@ -1,6 +1,6 @@
 # ems-response-audit-task
 
-[![CI](https://github.com/MOHAMMEDALAHMADI1/ems-response-audit-task/actions/workflows/ci.yml/badge.svg)](https://github.com/MOHAMMEDALAHMADI1/ems-response-audit-task/actions/workflows/ci.yml)
+[![CI](https://github.com/MOHAMMEDYOUSEFALAHMADI/ems-response-audit-task/actions/workflows/ci.yml/badge.svg)](https://github.com/MOHAMMEDYOUSEFALAHMADI/ems-response-audit-task/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Data: synthetic](https://img.shields.io/badge/data-100%25%20synthetic-orange)
@@ -53,7 +53,7 @@ stays useful as an eval. They can be shared with reviewers on request.
 
 ## Quickstart
 ```bash
-git clone https://github.com/MOHAMMEDALAHMADI1/ems-response-audit-task && cd ems-response-audit-task/task/repo
+git clone https://github.com/MOHAMMEDYOUSEFALAHMADI/ems-response-audit-task && cd ems-response-audit-task/task/repo
 python -m pytest -q                                  # visible tests (pass on the buggy code)
 python -m dispatch.report data --out report.json     # produce the monthly KPI report
 ```
